@@ -1,0 +1,28 @@
+object Foo;
+Integer Foo.getId()
+{
+	return this.id;
+}
+
+object Foo
+{
+	Integer id;
+};
+
+Foo()
+{
+	this.id = 0;
+}
+Foo(Integer id)
+{
+	this.id = id;
+}
+
+// Integer Foo.getId()
+// {
+// 	return this.id;
+// }
+Foo.setId!(Integer id)
+{
+	this.id = id;
+}

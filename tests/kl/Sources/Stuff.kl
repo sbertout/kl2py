@@ -1,0 +1,48 @@
+require AnotherBasicExtension;
+
+struct MyStruct
+{
+	Scalar x, y, z;
+};
+object MyOBJ
+{
+	Scalar threshold;
+};
+
+object Stuff
+{
+	String name;
+	private Boolean valid;	
+};
+
+Stuff()
+{
+	report('KL: in Stuff');
+	this.name = "HellYeah";
+	this.valid = true;
+}
+Stuff(String name)
+{
+	report('KL: in Stuff(name) ' + name);
+	this.name = name;
+	this.valid = true;
+}
+Stuff(String name, Boolean valid)
+{
+	this.name = name;
+	this.valid = valid;
+}
+
+Boolean Stuff.isValid() { return this.valid ; }
+
+String Stuff.getName(Boolean b)
+{
+	if (b) return this.name;
+	else return 'noname';
+}
+
+function String floatingFunction(String s, io Boolean b, out Integer i)
+{
+	i = 7;
+	return "";
+}

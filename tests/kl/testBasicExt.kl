@@ -1,0 +1,10 @@
+require BasicExtension;
+
+operator entry()
+{
+	report("hello");
+	Stuff s();
+	report(s.isValid());
+	report(s.getName(true));
+	report(s.getName(false));
+}
